@@ -23,7 +23,12 @@ function mouseOut() {
 }
 
 function click(index) {
-    selectedIndex = index;
+    if (index === selectedIndex) {
+        selectedIndex = -1;
+    } else {
+        selectedIndex = index;
+    }
+    
     changeView(selectedIndex);
 }
 
